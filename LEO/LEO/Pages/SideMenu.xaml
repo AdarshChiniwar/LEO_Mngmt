@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="LEO.Pages.SideMenu"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             ios:Page.UseSafeArea="True"
+    xmlns:viewModels="clr-namespace:LEO.Pages" xmlns:models="clr-namespace:LEO.Models"
+    x:DataType="viewModels:SideMenu"
+    IconImageSource="menu">
+    <ContentPage.Content>
+        <StackLayout Padding="0,0,0,10">
+            <Image Source="Leo.jpg" Aspect="AspectFill" HeightRequest="200"/>
+            <ScrollView>
+                <StackLayout BindableLayout.ItemsSource="{Binding SideItems}" Spacing="20" Margin="20,0,0,0">
+                    <BindableLayout.ItemTemplate>
+                        <DataTemplate x:DataType="models:SideMenuModel">
+                            <Frame HasShadow="False" Padding="15" BackgroundColor="#F2F1F5" CornerRadius="5" HorizontalOptions="Start" WidthRequest="200">
+                                <Label Text="{Binding Title}" TextColor="{StaticResource blue}" FontAttributes="Bold"/>
+                                <Frame.GestureRecognizers>
+                                      <TapGestureRecognizer x:Name="Item" Tapped="Item_Tapped" CommandParameter="{Binding .}"/>
+                                </Frame.GestureRecognizers>
+                            </Frame>
+                        </DataTemplate>
+                    </BindableLayout.ItemTemplate>
+                </StackLayout>
+            </ScrollView>
+
+            <Grid ColumnDefinitions="*,*,*,*" VerticalOptions="EndAndExpand">
+
+                <ImageButton x:Name="TwitterButton" Grid.Column="0" Source="twitter" BackgroundColor="Transparent" Clicked="TwitterButton_Clicked"/>
+                <ImageButton x:Name="YouTubeButton" Grid.Column="1" Source="youtube" BackgroundColor="Transparent"  Clicked="YouTubeButton_Clicked"/>
+                <ImageButton x:Name="LinkedinButton" Grid.Column="2" Source="linkedin" BackgroundColor="Transparent" Clicked="LinkedinButton_Clicked"/>
+                <ImageButton x:Name="FbButton" Grid.Column="3" Source="facebook" BackgroundColor="Transparent"  Clicked="FbButton_Clicked"/>
+
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="LEO.Pages.ContactUs"
+    xmlns:viewModels="clr-namespace:LEO.Pages"
+    x:DataType="viewModels:ContactUs"
+    xmlns:resource="clr-namespace:LEO"
+    Title="{Static resource:AppResource.ContactUs}">
+    <ContentPage.Content>
+        <StackLayout Padding="10">
+            <Label Text="We're eager to assist you!" FontSize="22" HorizontalOptions="Center" HorizontalTextAlignment="Center" FontAttributes="Bold" TextColor="{StaticResource blue}"/>
+            <Label Text="Whether you're integested to know more or would like to get a deal, our customer service representatives will guide you through." HorizontalOptions="Center" HorizontalTextAlignment="Center"/>
+            <Label Margin="0,20" Text="Shoot us an email now, and we'll back to you within 24 hours" HorizontalTextAlignment="Center"/>
+            <Label Text="{Binding PhoneNumber}" TextColor="{StaticResource blue}" FontAttributes="Bold"/>
+            <Label Text="{Binding Email}" TextColor="{StaticResource blue}" FontAttributes="Bold"/>
+            <Grid ColumnDefinitions="*,*" Margin="0,20,0,0">
+                <ImageButton Grid.Column="0" x:Name="EmailButton" Source="email" BackgroundColor="Transparent" Clicked="EmailButton_Clicked"/>
+                <ImageButton Grid.Column="1" x:Name="CallButton" Source="phone_call" BackgroundColor="Transparent" Clicked="CallButton_Clicked"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+

@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             ios:Page.UseSafeArea="True"
+             x:Class="LEO.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <Color x:Key="purple_200">#f3f2f8</Color>
+            <Color x:Key="purple_500">#f3f2f8</Color>
+            <Color x:Key="purple_700">#f3f2f8</Color>
+            <Color x:Key="teal_200">#FF03DAC5</Color>
+            <Color x:Key="teal_700">#FF018786</Color>
+            <Color x:Key="black">#FF000000</Color>
+            <Color x:Key="white">#FFFFFFFF</Color>
+            <Color x:Key="blue">#337ed1</Color>
+            <Color x:Key="tab_selected">#f3f2f8</Color>
+            <Color x:Key="login_bg">#f3f2f8</Color>
+            <Color x:Key="et_bg">#FFFFFFFF</Color>
+            <Color x:Key="code_picker">#FF000000</Color>
+            <Color x:Key="NavBarColor">#f5f5f5</Color>
+
+            <Style TargetType="NavigationPage">
+                <Setter Property="BarBackgroundColor" Value="{StaticResource NavBarColor}" />
+                <Setter Property="BarTextColor" Value="{StaticResource blue}" />
+                <Setter Property="BackgroundColor" Value="White"/>
+            </Style>
+
+            <Style ApplyToDerivedTypes="True" TargetType="Page">
+                <Setter Property="BackgroundColor" Value="White" />
+            </Style>
+            <Style ApplyToDerivedTypes="True" TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource black}" />
+            </Style>
+
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
