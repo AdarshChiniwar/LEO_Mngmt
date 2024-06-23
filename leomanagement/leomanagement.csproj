@@ -58,6 +58,7 @@
 
 	<ItemGroup>
 	  <None Remove="Resources\Images\icon.png" />
+	  <None Remove="Resources\Images\leoflyout.jpg" />
 	  <None Remove="Resources\Images\menu.png" />
 	</ItemGroup>
 

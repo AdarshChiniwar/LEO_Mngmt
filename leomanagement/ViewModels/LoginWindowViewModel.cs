@@ -106,7 +106,7 @@ namespace leomanagement.ViewModels
                 };
                 string serialize = JsonConvert.SerializeObject(applicationModel);
                 Preferences.Set("mode", serialize);
-                Application.Current.MainPage = new NavigationPage(new MainPage());
+                Application.Current.MainPage = new AppShell();
             }
         }
         private async void NavigateToMainPageInBussinessMode()
@@ -128,7 +128,7 @@ namespace leomanagement.ViewModels
                 };
                 string serialize = JsonConvert.SerializeObject(applicationModel);
                 Preferences.Set("mode", serialize);
-                Application.Current.MainPage = new NavigationPage(new MainPage());
+                Application.Current.MainPage = new AppShell();
             }
         }
         #endregion

@@ -14,7 +14,7 @@ namespace leomanagement
             if (Build.VERSION.SdkInt >= BuildVersionCodes.Kitkat)
             {
                 Android.Webkit.WebView.SetWebContentsDebuggingEnabled(true);
-                AppCompatDelegate.DefaultNightMode = AppCompatDelegate.ModeNightNo;
+                //AppCompatDelegate.DefaultNightMode = AppCompatDelegate.ModeNightNo;
             }
         }
     }

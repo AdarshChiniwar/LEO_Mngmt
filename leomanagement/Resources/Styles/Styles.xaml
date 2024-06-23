@@ -4,19 +4,19 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
 
-    <Color x:Key="purple_200">#f3f2f8</Color>
+    <!--<Color x:Key="purple_200">#f3f2f8</Color>
     <Color x:Key="purple_500">#f3f2f8</Color>
     <Color x:Key="purple_700">#f3f2f8</Color>
     <Color x:Key="teal_200">#FF03DAC5</Color>
     <Color x:Key="teal_700">#FF018786</Color>
     <Color x:Key="black">#FF000000</Color>
-    <Color x:Key="white">#FFFFFFFF</Color>
+    <Color x:Key="white">#FFFFFFFF</Color>-->
     <Color x:Key="blue">#337ed1</Color>
-    <Color x:Key="tab_selected">#f3f2f8</Color>
+    <!--<Color x:Key="tab_selected">#f3f2f8</Color>
     <Color x:Key="login_bg">#f3f2f8</Color>
     <Color x:Key="et_bg">#FFFFFFFF</Color>
-    <Color x:Key="code_picker">#FF000000</Color>
-    <Color x:Key="NavBarColor">#f5f5f5</Color>
+    <Color x:Key="code_picker">#FF000000</Color>-->
+    <Color x:Key="NavBarColor">Black</Color>
 
  
 
@@ -416,7 +416,7 @@
     </Style>
 
     <Style TargetType="Shell" ApplyToDerivedTypes="True">
-        <Setter Property="Shell.BackgroundColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource OffBlack}}" />
+        <Setter Property="Shell.BackgroundColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource Black}}" />
         <Setter Property="Shell.ForegroundColor" Value="{OnPlatform WinUI={StaticResource Primary}, Default={StaticResource White}}" />
         <Setter Property="Shell.TitleColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource SecondaryDarkText}}" />
         <Setter Property="Shell.DisabledColor" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray950}}" />

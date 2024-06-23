@@ -4,12 +4,85 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:leomanagement"
-    Shell.FlyoutBehavior="Disabled"
+    xmlns:pages="clr-namespace:leomanagement.Pages"
+    Shell.FlyoutBehavior="Flyout" 
     Title="leomanagement">
+  
+    
+    <Shell.ItemTemplate>
+        <DataTemplate>
+            <Border WidthRequest="250" HeightRequest="50" Margin="5,10,5,10"
+        StrokeThickness="0"
+        Background="#F2F1F5"
+        Padding="16,8"
+        HorizontalOptions="Center">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="8" />
+                </Border.StrokeShape>
+                <Label Text="{Binding Title}" VerticalOptions="Center" TextColor="{StaticResource blue}" FontAttributes="Bold"/>
+            </Border>
+        </DataTemplate>
+    </Shell.ItemTemplate>
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+    <Shell.MenuItemTemplate>
+        <DataTemplate>
+            <Border WidthRequest="250" HeightRequest="50" Margin="5,10,5,10"
+                    StrokeThickness="0"
+                    Background="#F2F1F5"
+                    Padding="16,8"
+                    HorizontalOptions="Center">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="8" />
+                </Border.StrokeShape>
+                <Label Text="{Binding Text}" VerticalOptions="Center" TextColor="{StaticResource blue}" FontAttributes="Bold"/>
+            </Border>
+        </DataTemplate>
+    </Shell.MenuItemTemplate>
+
+    <!--Flyout Header-->
+    <Shell.FlyoutHeader>
+        <Image HeightRequest="250"  Source="leoflyout.jpg" VerticalOptions="Center" HorizontalOptions="Center" />
+    </Shell.FlyoutHeader>
+
+    <!--Home-->
+    <FlyoutItem Title="Home" >
+        <ShellContent Shell.TitleColor="{StaticResource blue}"
+                      Title="Home"
+                      ContentTemplate="{DataTemplate pages:Home}"
+                      Route="MainPage" />
+    </FlyoutItem>
+    
+    <!--Contact Us-->
+    <FlyoutItem Title="Contact Us">
+        <ShellContent Shell.TitleColor="{StaticResource blue}"
+                      Title="Contact Us"
+                      ContentTemplate="{DataTemplate pages:ContactUs}"
+                      Route="ContactUs" />
+    </FlyoutItem>
+
+    <!--<FlyoutItem Title="Bussiness Mode">
+        <ShellContent Shell.TitleColor="{StaticResource blue}"
+                      Title="Bussiness Mode"
+                      ContentTemplate="{DataTemplate pages:Login}"
+                      Route="login" />
+    </FlyoutItem>
+
+
+    <FlyoutItem Title="Kiosk Mode">
+        <ShellContent Shell.TitleColor="{StaticResource blue}"
+                     Title="Kiosk Mode" 
+                     ContentTemplate="{DataTemplate pages:Login}"
+                     Route="login" />
+    </FlyoutItem>-->
+
+
+    <MenuItem Text="Bussiness Mode"
+           Clicked="MenuItem_Clicked"
+           CommandParameter="Bussiness" />
+
+
+    <MenuItem Text="Kiosk Mode"
+         Clicked="MenuItem_Clicked"
+         CommandParameter="Kiosk" />
 
 </Shell>
