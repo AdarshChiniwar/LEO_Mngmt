@@ -2,11 +2,28 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="leomanagement.Pages.ContactUs"
+             xmlns:resource="clr-namespace:leomanagement"
              Title="ContactUs">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+    <ScrollView>
+        <VerticalStackLayout Padding="10">
+            <StackLayout >
+                <Image Source="about_us"/>
+                <Label Padding="10" Text="{Static resource:AppResource.AboutUsContent}"/>
+            </StackLayout>
+            
+            <Label Text="We're eager to assist you!" FontSize="22" HorizontalOptions="Center" HorizontalTextAlignment="Center" FontAttributes="Bold" TextColor="{StaticResource blue}"/>
+            <Label Text="Whether you're integested to know more or would like to get a deal, our customer service representatives will guide you through." HorizontalOptions="Center" HorizontalTextAlignment="Center"/>
+            <Label Margin="0,20" Text="Shoot us an email now, and we'll back to you within 24 hours" HorizontalTextAlignment="Center"/>
+            <Label Text="{Binding PhoneNumber}" TextColor="{StaticResource blue}" FontAttributes="Bold"/>
+            <Label Text="{Binding EmailData}" TextColor="{StaticResource blue}" FontAttributes="Bold"/>
+            <Grid ColumnDefinitions="*,*,*,*" Margin="0,20,0,0">
+                <ImageButton Grid.Column="0" x:Name="EmailButton" Source="email" BackgroundColor="Transparent" Command="{Binding EmailCmd}" />
+                <ImageButton Grid.Column="1" x:Name="CallButton" Source="phone_call" BackgroundColor="Transparent" Command="{Binding PhoneCmd}" />
+                <ImageButton Grid.Column="2" x:Name="FbButton" Source="facebook" BackgroundColor="Transparent" Command="{Binding FbCmd}" />
+                <ImageButton Grid.Column="3" x:Name="InstaButton" Source="youtube" BackgroundColor="Transparent" Command="{Binding YtCmd}" />
+            </Grid>
+
+         
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

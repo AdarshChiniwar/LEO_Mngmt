@@ -16,7 +16,7 @@
     <Color x:Key="login_bg">#f3f2f8</Color>
     <Color x:Key="et_bg">#FFFFFFFF</Color>
     <Color x:Key="code_picker">#FF000000</Color>-->
-    <Color x:Key="NavBarColor">Black</Color>
+    <Color x:Key="NavBarColor">#f5f5f5</Color>
 
  
 
@@ -416,7 +416,7 @@
     </Style>
 
     <Style TargetType="Shell" ApplyToDerivedTypes="True">
-        <Setter Property="Shell.BackgroundColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource Black}}" />
+        <Setter Property="Shell.BackgroundColor" Value="{AppThemeBinding Light={StaticResource NavBarColor}, Dark={StaticResource NavBarColor}}" />
         <Setter Property="Shell.ForegroundColor" Value="{OnPlatform WinUI={StaticResource Primary}, Default={StaticResource White}}" />
         <Setter Property="Shell.TitleColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource SecondaryDarkText}}" />
         <Setter Property="Shell.DisabledColor" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray950}}" />

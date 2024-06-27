@@ -6,6 +6,7 @@
     xmlns:local="clr-namespace:leomanagement"
     xmlns:pages="clr-namespace:leomanagement.Pages"
     Shell.FlyoutBehavior="Flyout" 
+    Shell.ForegroundColor="{StaticResource blue}"
     Title="leomanagement">
   
     
